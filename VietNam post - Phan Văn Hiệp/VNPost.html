@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>VietNam Post</title>
+	<!-- <link rel="stylesheet" href="VNPost.css"> -->
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<style>
+		
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: "Times New Roman", Times, serif;
+}
+header{
+	height: 100px;
+	width: 100%;
+}
+.logo{
+	max-height: 100%;
+	width: 30%;
+	padding: 10px;
+}
+.logo img{
+	width: 120px;
+	max-height: 120px;
+	 display: block; 
+}
+nav{
+	height: 42px;
+	background:#00ccff;
+	padding: 0;
+}
+.nav > div{
+	float: left;
+	margin: 0;
+	text-align: center;
+	padding: 0;
+	height: 100%;
+
+}
+/* a{
+	text-decoration: none;
+} */
+.nav div a{
+	color: white;
+	display: block;
+	padding: 10px;
+	font-size: 15px;
+	text-decoration: none;
+
+}
+.nav>div:hover>a{
+	background: #EEAD0E;
+}
+main{
+	height:700px;
+	position: relative;
+	
+}
+*[class*='col']{
+	float: left;
+}
+.col-left{
+	width: 40px;
+	height:500px ;
+	margin: 5px;
+	position: absolute;
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.col-right{
+	width: 800px;
+	min-height: 500px;
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+	margin: 5px;
+}
+.col-center{
+	width: calc(100% - 810px - 50px);
+	min-width: 222px;
+	/* width: 489px; */
+	min-height: 500px;
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+	margin-left: 50px;
+	margin-top: 5px;
+	/* display: block; */
+
+}
+.title{
+	margin: 0;
+	padding: 10px;
+	box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.4);
+}
+h5{
+	padding: 0;
+	margin: 0;
+	color: rgba(0, 0, 0, 0.5);
+	display: block;
+}
+.search{
+	padding: 15px 0;
+	margin: 5px 5px;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+.search img{
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+}
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+.content{
+	padding: 10px;
+}
+.row{
+	padding: 5px;
+}
+.content .col{
+	padding: 0;
+}
+/* [class*="col"], .border{
+	border: 1px solid red;
+	min-height: 45px;
+} */
+.output{
+	border-bottom: 1px dotted black;
+}
+.fax{
+	text-align: center;
+	padding-top: 15px;
+}
+ .sidebar{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.sidebar li{
+	float: left;
+	width: 100%;
+}
+.sidebar li.sidebar-item.first img{
+	
+}
+.sidebar li.sidebar-item img{
+	float: left;
+	width: 35px;
+	height: 35px;
+	padding: 5px;
+}
+
+/**
+full-right
+*/
+.pull-right {
+  float: right;
+}
+.open-sidebar .col-left{
+	width: 200px;
+	transition: 1s;
+}
+.open-sidebar .col-center{
+	margin-left: 210px;
+	width: calc(100% - 810px - 210px);
+	/* width: 329px; */
+	transition: 1s;
+}
+.sub-sidebar{
+	list-style: none;
+}
+.sidebar li a{
+	display: none;
+}
+.open-sidebar .sidebar li a{
+	display: block;
+}
+.sidebar .first{
+	background: #00ccff;
+}
+.col-left ul{
+	list-style: none;
+}
+.open-sidebar .col-left .first img{
+	float: right;
+}
+.sub-sidebar img{
+	display: none;
+}
+.open-sidebar .sub-sidebar img{
+	display: block;
+}
+input{
+	width: 70%;
+}
+.folder ul{
+	list-style: none;
+}
+.folder img{
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+}
+.folder ul>li:hover li{
+	color: yellow;
+}
+.folder{
+	display: block;
+}
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="vietnam-post-logo-681EF2AC80-seeklogo.com.png" alt="">
+		</div>
+	</header>
+	<nav>
+		<div class="nav clearfix">
+			<div class="hover">
+				<a href="">HỆ THỐNG</a>
+			</div>
+			<div class="hover">
+				<a href="">KÊ KHAI</a>
+			</div>
+			<div class="hover">
+				<a href="">QUẢN LÍ SỰ VỤ</a>
+			</div>
+			<div class="hover">
+				<a href="">BÁO CÁO THỐNG KÊ</a>
+			</div>
+			<div class="hover">
+				<a href="">QUẢN LÍ BIÊN LAI</a>
+			</div>
+			<div class="hover">
+				<a href="">TRA CỨU</a>
+			</div>
+		</div>
+	</nav>
+	<main class="main">
+		<div class="clearfix">
+			<div class="col-left">
+			<ul class="sidebar">
+				<li class="sidebar-item first">
+					<img  src="popup.png" alt="" class="button-toggle pull-right">
+				</li>
+				<li class="sidebar-item item1">
+					<img src="folder-invoices.png" alt="">
+					<a href="#"><b>Danh sách hệ thống</b></a>
+					<style>
+						.item1 a{
+							color: #EEAD0E;
+						}
+					</style>
+				</li>
+				<li class="sidebar-item">
+					<img src="folder-invoices.png" alt="">
+					<a href="#"><b>Quản lí người dùng</b></a>
+					<ul class="sub-sidebar">
+						<li>
+							<img src="computer.png" alt="">
+							<a href="#">Danh sách nhóm quyền</a>
+						</li>
+						<li>
+							<img src="people.png" alt="">
+							<a href="#">Danh sách người dùng</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			</div>
+			<div class="col-center">
+				<div class="title">
+					<h5>DANH MỤC MẠNG LƯỚI</h5>
+				</div>
+				<div class="search">
+					<tr>Tìm kiếm:</tr>
+					<th>
+						<td><input type="text"></td>
+						<td>
+							<img src="unnamed.png" alt="">
+						</td>
+					</th>
+				</div>
+				<div class="folder">
+					<ul >
+						<li><img src="icon-folder-128.png" alt="">
+							<a class="folder1" href="#">00- Tổng công ty</a>
+							<ul>
+								<li><img src="icon-folder-128.png" alt="">
+									<a  class="folder2" href="">10- Bưu điện TP Hà Nội</a>
+									<ul>
+										<li><img src="icon-folder-128.png" alt="">
+											<a class="folder3" href="">1155- Bưu điện trung tâm 6</a>
+											<ul >
+												<li><img src="icon-folder-128.png" alt="">
+												<a class="folder4" href="">127060- KHI, Hoàng Mai</a>
+											</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-right">
+				<div class="title">
+					<h5>THÔNG TIN CHI TIẾT</h5>
+				</div>
+				<div class="content">
+					<div class="row">
+						<div class="col-2">
+							<b>Mã:</b>
+						</div>
+						<div class="col-4 output id">
+						</div>
+						<div class="col-2">
+							<b>Tên:</b>
+						</div>
+						<div class="col-4 output name"></div>					
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-2">
+							<b>Địa chỉ:</b>
+						</div>
+						<div class="col-4 output group"></div> 
+						<div class="col-4 output urban"></div>
+						<div class="col-2 output city"></div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-2"></div>
+						<div class="col-10 output address"></div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-2">
+							<b>Số điện thoại:</b>
+						</div>
+						<div class="col-4 output number"></div>
+						<div class="col-2 fax">
+							<b>Số fax:</b>
+						</div>
+						<div class="col-4 output numberfax"></div>					
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-2">
+							<b>Loại BC:</b>
+						</div>
+						<div class="col-3 output type"></div>
+						<div class="col-2">
+							<b>Phương thức:</b>
+						</div>
+						<div class="col-5 output method"></div>					
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-2">
+							<b>Cơ quan BHXH:</b>
+						</div>
+						<div class="col-10 output organ"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="jquery-3.4.1.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script>
+		$('.button-toggle').click(function () {
+			$('.main').toggleClass('open-sidebar');
+		})
+		$(".folder4").click(function(){
+			$(".id").append("<p>127060</p>");
+			$(".name").append("<p>KHI, Hoàng Mai</p>");
+			$(".group").append("<p>Phường Hoàng Mai</p>");
+			$(".urban").append("<p>Quận Giáp Bát</p>");
+			$(".city").append("<p>TP Hà Nội</p>");
+			$(".number").append("<p>0.123456789</p>");
+			$(".type").append("<p>KT2</p>");
+			$(".method").append("<p>Điện tử</p</p>");
+			return false;
+		});
+	</script>
+</body>
+</html>
