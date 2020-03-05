@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập JS Phan Văn Hiệp</title>
+</head>
+<style>
+    .selectform{
+        width: 100px;
+        height: 70px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+</style>
+<body>
+    <div class="content">
+        <select class="selectform" id="classname">
+            <option value="all">All</option>
+            <option value=".net">.net</option>
+            <option value="angular">Sngular</option>
+            <option value="java">Java</option>
+            <option value="test">Test</option>
+        </select>
+        <select class="selectform" id="student">
+            
+        </select>
+    </div>
+    <script>
+        var students = [
+                        {id: 1, name: 'tran van a', className: '.net'},
+                        {id: 2, name: 'tran van b', className: '.net'},
+                        {id: 3, name: 'tran van c', className: 'angular'},
+                        {id: 4, name: 'tran van d', className: 'angular'},
+                        {id: 5, name: 'tran van e', className: 'java'},
+                        {id: 6, name: 'tran van f', className: 'java'},
+                        {id: 7, name: 'tran van g', className: 'java'},
+                        {id: 8, name: 'tran van h', className: 'test'},
+                        {id: 9, name: 'tran van i', className: 'test'},
+                        {id: 10, name: 'tran van j', className: 'test'}
+                        ];
+    var select = document.getElementById("classname");
+    var selectstudent = document.getElementById("student");
+   
+  document.getElementById('classname').onchange = function(){
+        // var valueStudent = "";
+        var append = '';
+            var findName = students.filter(function(x){
+                if(select.value==x.className){
+                      append += '<option value="'+x.name+'">'+x.name+'</option>';   
+                 }
+                 console.log(append);
+                 document.getElementById('student').innerHTML = append;
+            });
+        }; 
+    </script>
+</body>
+</html>
